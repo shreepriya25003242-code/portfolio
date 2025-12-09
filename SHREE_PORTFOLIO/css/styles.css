@@ -1,0 +1,93 @@
+/* styles.css
+   Purple + Black theme for Student Portfolio
+   Author: Shreepriya Singh
+   Roll No: N 2025011300242
+   Class: CSE AI-D
+   Comments: Basic CSS only. Uses float for the hero and flexbox for cards.
+*/
+
+:root{
+  --bg:#070708;
+  --panel:#0f0f11;
+  --accent:#7b2cff;
+  --accent-2:#9d6bff;
+  --muted:#bfbfd9;
+  --text:#eaeaf2;
+  --glass: rgba(255,255,255,0.03);
+  --container:1000px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg),#050506);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Layout container */
+.container{max-width:var(--container);margin:0 auto;padding:24px}
+
+/* NAV BAR (common to all pages) */
+.nav{background:linear-gradient(90deg, rgba(123,44,255,0.06), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-family:Verdana, 'Poppins', sans-serif;color:var(--text);text-decoration:none}
+.menu a{color:var(--muted);text-decoration:none;margin-left:16px;padding:8px;border-radius:8px}
+.menu a:hover, .menu a.active{color:var(--text);background:rgba(123,44,255,0.08)}
+
+/* HERO (uses float to satisfy requirement) */
+.hero{padding:36px 0}
+.hero-left{float:left;width:62%}
+.hero-right{float:right;width:34%}
+h1{font-size:34px;margin:0 0 10px}
+.lead{color:var(--muted);line-height:1.6}
+.accent{color:var(--accent);font-weight:700}
+.cta-row .btn{margin-right:12px}
+
+/* PROFILE CARD appearance */
+.profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(123,44,255,0.08);text-align:center}
+.profile-img{width:100%;max-width:160px;border-radius:12px;display:block;margin:0 auto 12px}
+.muted{color:var(--muted)}
+.small{font-size:0.9em}
+
+/* Highlights (flexbox) */
+.highlights{display:flex;gap:18px;margin-top:28px}
+.card{background:var(--glass);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);flex:1}
+.card.small h4{margin:0 0 6px}
+
+/* Page card container */
+.page-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:24px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);margin-top:20px}
+
+/* ABOUT page */
+.about-grid{display:flex;gap:22px;align-items:flex-start}
+.about-photo{flex:0 0 220px}
+.round-photo{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.about-text{flex:1}
+
+/* SKILLS (flexbox for cards) */
+.skills-flex{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap}
+.skill-card{flex:1;padding:18px;border-radius:12px;background:var(--card-bg, rgba(255,255,255,0.02));border:var(--border, 1px solid rgba(255,255,255,0.03));min-width:220px}
+.skill-card h3{margin-top:0;color:var(--accent)}
+
+/* CONTACT FORM */
+.contact-form{display:flex;flex-direction:column;gap:12px;max-width:720px}
+.contact-form label{font-size:14px;color:var(--muted)}
+.contact-form input, .contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:8px;color:var(--text)}
+.contact-form input:focus, .contact-form textarea:focus{outline:none;box-shadow:0 0 0 6px rgba(123,44,255,0.06);border-color:var(--accent)}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+/* FOOTER */
+.footer{border-top:1px solid rgba(255,255,255,0.02);padding:18px 0;margin-top:40px;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-left, .hero-right{float:none;width:100%}
+  .about-grid{flex-direction:column}
+  .skills-flex{flex-direction:column}
+  .highlights{flex-direction:column}
+}

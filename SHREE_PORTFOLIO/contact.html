@@ -1,0 +1,52 @@
+<!-- contact.html
+     Contact page with a simple HTML form.
+     Fields: Name, Email, Subject, Message, Submit Button.
+     Note: This is static HTML; to collect responses, configure a form backend or service (Formspree / Netlify).
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Shreepriya Singh</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Shreepriya Singh</a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-card">
+    <h2>Contact Me</h2>
+    <p class="muted">Use the form below to send a message. (Form is static — add a backend to process submissions.)</p>
+
+    <form class="contact-form" action="#" method="post" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required placeholder="Your full name">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" required placeholder="Subject">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 Shreepriya Singh</div>
+  </footer>
+</body>
+</html>

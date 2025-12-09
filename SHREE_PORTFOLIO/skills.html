@@ -1,0 +1,57 @@
+<!-- skills.html
+     Skills & Projects page
+     Contains minimum 3 skill/project cards aligned using flexbox.
+     Each card includes name, 1-2 lines description, background color and border.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills & Projects — Shreepriya Singh</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Shreepriya Singh</a>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-card">
+    <h2>Skills & Projects</h2>
+    <p class="muted">Below are some key skills and sample projects.</p>
+
+    <!-- Flexbox container for cards -->
+    <section class="skills-flex" aria-label="Skills list">
+      <!-- Card 1 -->
+      <article class="skill-card" style="--bg: rgba(123,44,255,0.08); --border: 1px solid rgba(123,44,255,0.25);">
+        <h3>Web Development</h3>
+        <p>Build responsive sites using HTML & CSS; focus on clean layout and UX.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="skill-card" style="--bg: rgba(157,107,255,0.06); --border: 1px solid rgba(157,107,255,0.22);">
+        <h3>Programming (C & Python)</h3>
+        <p>Core programming, algorithms, problem solving, and basic scripting.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="skill-card" style="--bg: rgba(123,44,255,0.06); --border: 1px solid rgba(123,44,255,0.20);">
+        <h3>Mini Portfolio Project</h3>
+        <p>Designed a multi-page portfolio (HTML + CSS) with navigation and contact form.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 Shreepriya Singh</div>
+  </footer>
+</body>
+</html>

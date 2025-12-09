@@ -1,0 +1,79 @@
+<!-- index.html
+     Student Portfolio - Home page
+     Author: Shreepriya Singh
+     Roll No: N 2025011300242
+     Class: CSE AI-D
+     Comments: demonstrates HTML structure, semantic layout, CSS styling, and use of float.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Shreepriya Singh</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Common navigation bar (present on all pages) -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Shreepriya Singh</a>
+      <nav class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO: left column text, right column profile (float demonstrates requirement) -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Hello — I'm <span class="accent">Shreepriya</span></h1>
+        <p class="lead">I am a B.Tech student (CSE - AI) at KIET. I build responsive web pages, experiment with machine learning, and enjoy solving algorithmic problems. I aim to combine clean design with practical code to build useful projects.</p>
+
+        <p class="cta-row">
+          <a class="btn" href="skills.html">View Skills</a>
+          <a class="btn ghost" href="contact.html">Contact Me</a>
+        </p>
+      </div>
+
+      <aside class="hero-right" aria-label="Profile card">
+        <!-- Profile card floats right of hero-left -->
+        <div class="profile-card">
+          <!-- Put your profile image at img/profile.jpg -->
+          <img src="img/profile.jpg" alt="Shreepriya Profile" class="profile-img">
+          <h3>Shreepriya Singh</h3>
+          <p class="muted">B.Tech — CSE (AI-D)</p>
+          <p class="muted small">Roll No: N 2025011300242</p>
+        </div>
+      </aside>
+
+      <div style="clear: both;"></div>
+    </section>
+
+    <!-- Highlights using flexbox (demonstrates flex usage elsewhere) -->
+    <section class="highlights">
+      <div class="card small">
+        <h4>Projects</h4>
+        <p>Multiple small projects in web and ML.</p>
+      </div>
+      <div class="card small">
+        <h4>Skills</h4>
+        <p>HTML, CSS, C, Python, ML basics.</p>
+      </div>
+      <div class="card small">
+        <h4>GitHub</h4>
+        <p>Repository with project code and README.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 Shreepriya Singh — CSE AI-D</div>
+  </footer>
+</body>
+</html>
